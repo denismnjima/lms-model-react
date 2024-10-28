@@ -14,6 +14,7 @@ import InstructorCohorts from "./pages/InstructorCohorts";
 import SingleCourse from "./pages/SingleCourse";
 import SingleSubmodule from "./pages/SingleSubmodule";
 import StudentSingleCourse from "./pages/StudentSingleCourse";
+import AddCohort from "./pages/AddCohort";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -42,6 +43,7 @@ function App() {
       <Route path="/single-submodule" element={<SingleSubmodule />} />
       <Route path="/student-course" element={<StudentSingleCourse />} />
       <Route path="/single-submodule" element={<SingleSubmodule />} />
+      <Route path="/add-cohort" element={<AddCohort />} />
     </Routes>
   );
 }
