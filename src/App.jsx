@@ -21,6 +21,7 @@ function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login setUser={setUser} />} />
+      <Route path="/" element={<Login setUser={setUser} />} />
       <Route path="/dashboard" element={<Dashboard user={user} />} />
       {user?.role === "admin" && <Route path="/add-cohort" element={<AddCohort  user={user}/>} />}
       {user?.role === "admin" && <Route path="/instructors" element={<Instructors />} />}
