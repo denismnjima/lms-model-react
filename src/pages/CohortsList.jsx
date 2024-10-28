@@ -12,7 +12,7 @@ const CohortsList = () => {
   useEffect(() => {
     const fetchCohorts = async () => {
       try {
-        const response = await fetch("http://localhost/lms/list_cohorts.php");
+        const response = await fetch("https://test.istreet.co.ke/list_cohorts.php");
         const data = await response.json();
         if (data.success) {
           setCohorts(data.data);

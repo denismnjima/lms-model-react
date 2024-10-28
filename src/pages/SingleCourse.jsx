@@ -13,7 +13,7 @@ const SingleCourse = () => {
 
   const fetchModules = async () => {
     try {
-      const response = await fetch(`http://localhost/lms/modules_list.php?course_id=${courseId}`);
+      const response = await fetch(`https://test.istreet.co.ke/modules_list.php?course_id=${courseId}`);
       const data = await response.json();
       if (data.success) {
         setModules(data.data);
@@ -32,7 +32,7 @@ const SingleCourse = () => {
   // Fetch submodules for a module
   const fetchSubmodules = async (moduleId) => {
     try {
-      const response = await fetch(`http://localhost/lms/submodules.php?module_id=${moduleId}`);
+      const response = await fetch(`https://test.istreet.co.ke/submodules.php?module_id=${moduleId}`);
       const data = await response.json();
       return data.success ? data.data : [];
     } catch (error) {

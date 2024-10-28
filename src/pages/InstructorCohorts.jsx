@@ -10,7 +10,7 @@ const InstructorCohorts = ({ instructorId }) => {
   useEffect(() => {
     const fetchCohorts = async () => {
       try {
-        const response = await fetch(`http://localhost/lms/instructor_cohorts.php?instructor_id=${instructorId}`);
+        const response = await fetch(`https://test.istreet.co.ke/instructor_cohorts.php?instructor_id=${instructorId}`);
         const data = await response.json();
         if (data.success) {
           setCohorts(data.data);

@@ -12,7 +12,7 @@ const Instructors = () => {
   useEffect(() => {
     const fetchInstructors = async () => {
       try {
-        const response = await fetch("http://localhost/lms/ instructors.php");
+        const response = await fetch("https://test.istreet.co.ke/instructors.php");
         const data = await response.json();
         if (data.success) {
           setInstructors(data.data);

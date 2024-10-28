@@ -13,7 +13,7 @@ const AddCourses = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("http://localhost/lms/add_course.php", {
+      const response = await fetch("https://test.istreet.co.ke/add_course.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, description }),

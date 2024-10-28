@@ -12,7 +12,7 @@ const CoursesList = ({user}) => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const response = await fetch("http://localhost/lms/courses_list.php");
+        const response = await fetch("https://test.istreet.co.ke/courses_list.php");
         const data = await response.json();
         if (data.success) {
           setCourses(data.data);

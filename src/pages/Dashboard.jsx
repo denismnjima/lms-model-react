@@ -15,7 +15,7 @@ const Dashboard = ({ user }) => {
     if (user.role === "student") {
       const fetchCourses = async () => {
         try {
-          const response = await fetch(`http://localhost/lms/student_courses.php?student_id=${user.id}`);
+          const response = await fetch(`https://test.istreet.co.ke/student_courses.php?student_id=${user.id}`);
           const data = await response.json();
           if (data.success) {
             setCourses(data.data);

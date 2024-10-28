@@ -19,13 +19,13 @@ const Login = ({ setUser }) => {
       let endpoint;
       switch (loginAs) {
         case "admin":
-          endpoint = "http://localhost/lms/admin_login.php";
+          endpoint = "https://test.istreet.co.ke/admin_login.php";
           break;
         case "instructor":
-          endpoint = "http://localhost/lms/instructor_login.php";
+          endpoint = "https://test.istreet.co.ke/instructor_login.php";
           break;
         default:
-          endpoint = "http://localhost/lms/student_login.php";
+          endpoint = "https://test.istreet.co.ke/student_login.php";
       }
 
       const response = await fetch(endpoint, {

@@ -10,7 +10,7 @@ const AddToCohort = ({ cohortId, onClose, onAddSuccess }) => {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await fetch("http://localhost/lms/list_students.php");
+        const response = await fetch("https://test.istreet.co.ke/list_students.php");
         const data = await response.json();
         if (data.success) {
           setStudents(data.data);
@@ -37,7 +37,7 @@ const AddToCohort = ({ cohortId, onClose, onAddSuccess }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("http://localhost/lms/add_to_cohort.php", {
+      const response = await fetch("https://test.istreet.co.ke/add_to_cohort.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

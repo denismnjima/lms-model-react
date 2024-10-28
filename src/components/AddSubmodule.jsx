@@ -12,7 +12,7 @@ const AddSubmodule = ({ moduleId, onSubmoduleAdded }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(`http://localhost/lms/submodules.php?module_id=${moduleId}`, {
+      const response = await fetch(`https://test.istreet.co.ke/submodules.php?module_id=${moduleId}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, content, type}),

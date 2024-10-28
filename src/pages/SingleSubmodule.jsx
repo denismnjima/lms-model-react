@@ -11,7 +11,7 @@ const SingleSubmodule = () => {
   useEffect(() => {
     const fetchSubmodule = async () => {
       try {
-        const response = await fetch(`http://localhost/lms/single_submodule.php?submodule_id=${submoduleId}`);
+        const response = await fetch(`https://test.istreet.co.ke/single_submodule.php?submodule_id=${submoduleId}`);
         const data = await response.json();
         if (data.success) {
           setSubmodule(data.data);
